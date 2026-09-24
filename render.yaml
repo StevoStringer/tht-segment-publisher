@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tht-segment-publisher
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk:
+      name: tht-data
+      mountPath: /app/data
+      sizeGB: 10
